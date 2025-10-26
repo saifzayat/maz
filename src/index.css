@@ -179,6 +179,13 @@ h2 {
   letter-spacing: -1.44px;
   text-align: center;
 }
+.padding {
+  padding-inline: 200px;
+  text-align: center;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 34px;
+}
 .s-card {
   display: flex;
   flex-direction: row;
@@ -186,7 +193,6 @@ h2 {
   align-items: center;
   padding: 0px 40px;
   gap: 12px;
-
   width: 245px;
   height: 60px;
   background: var(--SCard-color);
@@ -194,6 +200,10 @@ h2 {
   box-shadow: var(--SCard-shadow);
   border-radius: 20px;
   font-size: 14px;
+  transition: transform 0.3s ease;
+}
+.s-card:hover {
+  transform: scale(1.05);
 }
 .icon {
   display: flex;
@@ -243,6 +253,7 @@ h2 {
   position: absolute;
   z-index: 0;
 }
+
 .TopBlock,
 .BottoMBlock {
   position: relative;
@@ -251,7 +262,7 @@ h2 {
   border: 1px solid var(--block-border-color);
   border-radius: 16px;
   box-shadow: 0px 0px 80px var(--block-shadow);
-  transition: box-shadow 0.6s ease, background 0.6s ease;
+  transition: box-shadow 0.6s ease, background 0.6s ease rotateX 0.6 ease;
   z-index: 1;
   overflow: visible;
   background: var(--block-background-color);
