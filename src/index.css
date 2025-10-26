@@ -31,9 +31,10 @@
     rgba(245, 249, 253, 0.16) 100%
   );
 
-  --main-shadow: 0px 0px 40px 0px #42c0f01a, 0px 2px 0px 0px #ffffff inset,
-    -12px -12px 28px 0px #ffffffcc, 12px 12px 28px 0px #a3b1c680;
-  --main-border-color: #ffffffb2;
+  --main-shadow: 12px 12px 28px rgba(163, 177, 198, 0.5),
+    -12px -12px 28px rgba(255, 255, 255, 0.8),
+    0px 0px 40px rgba(66, 192, 240, 0.1), inset 0px 2px 0px #ffffff;
+  --main-border-color: rgba(255, 255, 255, 0.7);
   /* main card colors  */
   /* Small Card colors  */
   --SCard-color: #f0f4f8;
