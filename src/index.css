@@ -1,13 +1,287 @@
-body {
+* {
+  box-sizing: border-box;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+}
+:root {
+  --bg-color: radial-gradient(
+      89.33% 128.78% at 70% 80%,
+      rgba(75, 43, 175, 0.12) 0%,
+      rgba(0, 0, 0, 0) 50%
+    ),
+    radial-gradient(
+      89.33% 128.78% at 30% 20%,
+      rgba(66, 192, 240, 0.15) 0%,
+      rgba(0, 0, 0, 0) 50%
+    );
+
+  --bt-color: linear-gradient(90deg, #00b8db, #2b7fff);
+  --text-color: #545454;
+  --color: linear-gradient(0deg, #4b2baf, #42c0f0);
+  /* icon  */
+  --icon-background: #e8ecf0;
+  --icon-border: rgba(163, 177, 198, 0.2);
+  --icon-shadow: inset 4px 4px 8px rgba(163, 177, 198, 0.5),
+    inset -4px -4px 8px rgba(255, 255, 255, 0.6);
+  /* icon  */
+  /* main card colors  */
+  --card-color: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.18) 0%,
+    rgba(245, 249, 253, 0.16) 100%
+  );
+
+  --main-shadow: 0px 0px 40px 0px #42c0f01a, 0px 2px 0px 0px #ffffff inset,
+    -12px -12px 28px 0px #ffffffcc, 12px 12px 28px 0px #a3b1c680;
+  --main-border-color: #ffffffb2;
+  /* main card colors  */
+  /* Small Card colors  */
+  --SCard-color: #f0f4f8;
+  --SCard-border-color: #ffffff4d;
+  --SCard-shadow: 4px 4px 8px rgba(163, 177, 198, 0.4),
+    -4px -4px 8px rgba(255, 255, 255, 0.7);
+  /* Small Card colors  */
+  /* input color */
+  --input-shadow: inset 4px 4px 8px rgba(163, 177, 198, 0.5),
+    inset -4px -4px 8px rgba(255, 255, 255, 0.6);
+  --input-border-color: rgba(163, 177, 198, 0.2);
+  --input-background-color: #e8ecf0;
+  /* input color */
+  /* block element */
+  --block-background-color: linear-gradient(
+    145deg,
+    #f5f9fd 6.17%,
+    #e8ecf0 93.83%
+  );
+  --block-shadow: rgba(75, 43, 175, 0.12);
+  --block-shadow-color: rgba(75, 43, 175, 0.12);
+  --block-border-color: rgba(255, 255, 255, 0.6);
+  --shadow-element: rgba(75, 43, 175, 0.1);
+  --shadow-top-element: rgba(141, 230, 255, 0.19);
+  /* block element */
+}
+.dark {
+  --bg-color: linear-gradient(
+    135deg,
+    #0a0a0f 0%,
+    #12121a 30%,
+    #151520 50%,
+    #12121a 70%,
+    #0a0a0f 100%
+  );
+  --card-color: linear-gradient(
+    135deg,
+    rgba(35, 35, 55, 0.84) 0%,
+    rgba(25, 25, 40, 0.19) 100%
+  );
+  --text-color: #ffffff;
+  /* icon  */
+  --icon-background: #151520;
+  --icon-border: rgba(255, 255, 255, 0.03);
+  --icon-shadow: inset 4px 4px 8px rgba(0, 0, 0, 0.6),
+    inset -4px -4px 8px rgba(40, 40, 60, 0.2);
+
+  /* icon  */
+  /* main */
+  --main-shadow: 0px 0px 40px 0px #42c0f026, 0px 2px 0px 0px #ffffff1a inset,
+    -12px -12px 28px 0px #28283c4d, 12px 12px 28px 0px #000000b2;
+  --main-border-color: #ffffff26;
+  /* main */
+  /* SCard color */
+  --SCard-color: #151520;
+  --SCard-border-color: linear-gradient(
+    135deg,
+    rgba(35, 35, 55, 0.9) 0%,
+    rgba(25, 25, 40, 0.85) 100%
+  );
+  --SCard-shadow: 4px 4px 8px rgba(0, 0, 0, 0.5),
+    -4px -4px 8px rgba(40, 40, 60, 0.2);
+  /* SCard color */
+  --input-shadow: inset 4px 4px 8px rgba(0, 0, 0, 0.6),
+    inset -4px -4px 8px rgba(40, 40, 60, 0.2);
+  --input-border-color: rgba(0, 0, 0, 0.3);
+  --input-background-color: #12121a;
+  /* block element */
+  --block-background-color: linear-gradient(
+    135deg,
+    rgba(35, 35, 55, 0.9) 0%,
+    rgba(25, 25, 40, 0.85) 100%
+  );
+  --block-shadow: rgba(66, 192, 240, 0.5);
+  --block-shadow-color: rgba(75, 43, 175, 0.18);
+  --block-border-color: rgba(255, 255, 255, 0.15);
+  --shadow-element: rgba(75, 43, 175, 0.1);
+  --shadow-top-element: rgba(66, 192, 240, 0.08);
+
+  /* block element */
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  padding: 120px 142px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: var(--bg-color);
+  transition: background 0.6s ease, color 0.6s ease;
+  color: var(--text-color);
+  font-family: "Urbanist", sans-serif;
+}
+.svg {
+  color: var(--text-color);
+  transition: color 0.5s ease; /* عشان ال dark / light يكون smooth */
+}
+
+main {
+  background: var(--card-color);
+  border: solid 1px var(--main-border-color);
+  border-radius: 48px;
+  padding: 65px 81px;
+  transition: background 0.6s ease, color 0.6s ease, box-shadow 0.6s ease;
+  box-shadow: var(--main-shadow);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 24px;
+  max-width: 1157px;
+  max-height: 837px;
+}
+
+button {
+  padding: 10px 16px;
+  border: none;
+  border-radius: 46px;
+  cursor: pointer;
+  background: var(--bt-color);
+  color: white;
+  transition: transform 0.3s ease;
+  box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0px 4px 6px -4px rgba(0, 0, 0, 0.1);
+}
+
+button:hover {
+  transform: scale(1.05);
+}
+
+.highlight {
+  background: var(--color);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: background 0.5s ease;
+}
+h2 {
+  font-weight: 800;
+  font-style: ExtraBold;
+  font-size: 72px;
+  line-height: 90px;
+  letter-spacing: -1.44px;
+  text-align: center;
+}
+.s-card {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 40px;
+  gap: 12px;
+
+  width: 245px;
+  height: 60px;
+  background: var(--SCard-color);
+  border: 1px solid var(--SCard-border-color);
+  box-shadow: var(--SCard-shadow);
+  border-radius: 20px;
+  font-size: 14px;
+}
+.icon {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 0px;
+
+  width: 32px;
+  height: 32px;
+
+  background: var(--icon-background);
+  border: 1px solid var(--icon-border);
+  box-shadow: var(--icon-shadow);
+  border-radius: 16px;
+}
+.mailContainer {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  max-width: 400px;
+}
+
+.mailContainer input {
+  flex: 1;
+  padding: 10px 16px 10px 44px;
+  border-radius: 62px;
+  border: 1px solid var(--input-border-color);
+  background: var(--input-background-color);
+  box-shadow: var(--input-shadow);
+  outline: none;
+  font-size: 14px;
+  transition: 0.3s ease;
+  color: var(--text-color);
+}
+
+.mailContainer .mailIcon {
+  position: absolute;
+  left: 16px;
+  font-size: 20px;
+  pointer-events: none;
+}
+.container {
+  position: absolute;
+  z-index: 0;
+}
+.TopBlock,
+.BottoMBlock {
+  position: relative;
+  width: 128.29px;
+  height: 128.29px;
+  border: 1px solid var(--block-border-color);
+  border-radius: 16px;
+  box-shadow: 0px 0px 80px var(--block-shadow);
+  transition: box-shadow 0.6s ease, background 0.6s ease;
+  z-index: 1;
+  overflow: visible;
+  background: var(--block-background-color);
+}
+.TopBlock {
+  top: 0;
+  right: 0;
+  transform: translate(850%, -50%);
+}
+.BottoMBlock {
+  top: 100%;
+  left: 0%;
+  transform: translate(-50%, -50%);
+}
+.BottoMBlock::before,
+.TopBlock::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 384px;
+  height: 384px;
+  transform: translate(-50%, -50%);
+  opacity: 0.8;
+  filter: blur(64px);
+  border-radius: 50%;
+  z-index: -1;
+}
+.BottoMBlock::before {
+  background: var(--shadow-element);
+}
+.TopBlock::before {
+  background: var(--shadow-top-element);
 }
