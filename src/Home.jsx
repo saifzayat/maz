@@ -14,12 +14,13 @@ export const Home = () => {
         <h2>
           Something <span className="highlight">Extraordinary</span> is Coming
         </h2>
-        <p>
+        <p className="padding">
           We're crafting a revolutionary platform that transforms ideas into
           measurable impact. Be the first to experience the future of integrated
           innovation.
         </p>
         <SendMail />
+        <p>Join 500+ innovators waiting for launch.</p>
 
         <div style={{ display: "flex", gap: 15 }}>
           <SCard Title="AI-Powered Design" Icon={Star} />
